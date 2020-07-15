@@ -1,0 +1,2 @@
+@ECHO OFF
+C:\Users\HP\Documents\apache-jmeter-5.3\bin\jmeter.bat -Jthreads=%ThreadGroup%  -Jrampup=%RampUp% -n -t C:\Users\HP\Documents\Jenkins_Jmeter\Script\JenkinsTest.jmx  -l  C:\Users\HP\Documents\Jenkins_results.jtl
