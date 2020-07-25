@@ -148,7 +148,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">${__P(Report,/home/aditi/Jenkins_Jmeter/Result/Report.csv)}</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
