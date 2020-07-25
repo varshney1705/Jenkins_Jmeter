@@ -18,10 +18,10 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(Thread,50)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(RampUp,60)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(Duration,4200)}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
@@ -70,7 +70,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
           <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
           <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
           <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
-          <stringProp name="ChromeDriverConfig.chromedriver_path">/home/aditi/Downloads/chromedriver_linux64/chromedriver</stringProp>
+          <stringProp name="ChromeDriverConfig.chromedriver_path">${__P(DriverPath,/home/aditi/Downloads/chromedriver_linux64/chromedriver)}</stringProp>
           <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
           <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
           <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
@@ -113,51 +113,6 @@ WDS.sampleResult.sampleEnd();</stringProp>
           </objProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
-        <hashTree/>
-        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Hits per Second" enabled="true">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>false</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <url>true</url>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <stringProp name="filename"></stringProp>
-          <longProp name="interval_grouping">1000</longProp>
-          <boolProp name="graph_aggregated">false</boolProp>
-          <stringProp name="include_sample_labels"></stringProp>
-          <stringProp name="exclude_sample_labels"></stringProp>
-          <stringProp name="start_offset"></stringProp>
-          <stringProp name="end_offset"></stringProp>
-          <boolProp name="include_checkbox_state">false</boolProp>
-          <boolProp name="exclude_checkbox_state">false</boolProp>
-        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
         <hashTree/>
         <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
